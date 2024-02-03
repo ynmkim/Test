@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import ProfileForm from './components/ProfileForm';
+
+const users = [
+  {
+    id: 0,
+    email: 'test@gmail.com',
+    nickname: '김김김',
+    profileImageUrl: 'string',
+    createdAt: '2024-02-03T10:15:18.878Z',
+    updatedAt: '2024-02-03T10:15:18.878Z',
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ProfileForm users={users} />
     </div>
   );
 }
